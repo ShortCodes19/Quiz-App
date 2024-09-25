@@ -1,0 +1,112 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #e4e4e4;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-container {
+  width: 90%;
+  max-width: 60rem;
+  height: 50rem;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-container h2 {
+  border-bottom: 1px solid #999;
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.answers {
+  margin: 10px 0;
+  width: 100%;
+  padding: 1rem 3rem;
+}
+
+.answers input[type="radio"] {
+  display: none;
+}
+
+.answers label {
+  position: relative;
+  font-size: 2rem;
+  margin-left: 2rem;
+  padding-left: 3rem;
+  cursor: pointer;
+  display: block;
+  margin-top: 2rem;
+}
+
+.answers label::before {
+  content: "";
+  position: absolute;
+  left: -2rem;
+  top: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 2px solid #007bff;
+  background-color: #fff;
+}
+
+.answers input[type="radio"]:checked + label::before {
+  background-color: #007bff;
+  box-shadow: 0 0 0 2px #007bff inset;
+}
+
+.answers input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 1rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+button {
+  position: absolute;
+  bottom: 0;
+  border: none;
+  background-color: rgb(15, 33, 117);
+  color: #fff;
+  padding: 1rem 5rem;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(8, 20, 73);
+}
+
+#score {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 1rem;
+  font-size: 2rem;
+}
